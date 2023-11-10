@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Static config:
 # Destination directory
-downloadDir = r'C:\Users\simon\Downloads\BSLegacyLauncher (1)\BSLegacyLauncher\Installed Versions\Beat Saber 1.29.1\Beat Saber_Data\CustomLevels'
+downloadDir = os.getenv('BeatSaberCustomLevels')
 
 # Headers needed to fake being a real browser session ty bypass Cloudflare check
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
@@ -112,10 +112,10 @@ def download(url, max, dir):
 
 
 # REST API URls to grab songs from
-# print("** Downloading ranked songs **")
-# download('https://api.beatsaver.com/search/text/{}?ranked=true&sortOrder=Latest', 0, downloadDir)
+print("** Downloading ranked songs **")
+download('https://api.beatsaver.com/search/text/{}?ranked=true&sortOrder=Latest', 0, downloadDir)
 
-print("")
-print("** Downloading top-500 unranked & verified songs **")
-download('https://api.beatsaver.com/search/text/{}?ranked=false&verified=true&sortOrder=Rating', 500, downloadDir)
+#print("")
+# print("** Downloading top-500 unranked & verified songs **")
+# download('https://api.beatsaver.com/search/text/{}?ranked=false&verified=true&sortOrder=Rating', 500, downloadDir)
 
