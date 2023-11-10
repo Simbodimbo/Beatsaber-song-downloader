@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Static config:
 # Destination directory
-downloadDir = r'C:\Users\simon\Downloads\BSLegacyLauncher (1)\BSLegacyLauncher\Installed Versions\Beat Saber 1.29.1\Beat Saber_Data\CustomLevels'
+downloadDir = r'C:\Users\simon\Downloads\BSLegacyLauncher (1)\BSLegacyLauncher\Installed Versions\Beat Saber 1.29.1\Beat Saber_Data\CustomLevels TEST'
 
 # Headers needed to fake being a real browser session ty bypass Cloudflare check
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'}
